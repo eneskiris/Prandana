@@ -19,22 +19,36 @@ const Stack = createNativeStackNavigator();
 const StatusBarHeight = Constant.statusBarHeight;
 
 const Router = () => {
-  const isLogged = false;
+  const isLogged = true;
   return (
-    <SafeAreaView style={container}>
+    <SafeAreaView style={style.container}>
       <NavigationContainer>
         {isLogged ? (
-          <Tab.Navigator screenOptions={{ headerShown: false }}>
+          <Tab.Navigator
+            screenOptions={{
+              headerShown: false,
+              tabBarShowLabel: false,
+              tabBarActiveTintColor: Colors.active,
+              tabBarInactiveTintColor: Colors.inactive,
+              tabBarStyle: {
+                backgroundColor: "#e6e7e8",
+                marginHorizontal: 20,
+                borderRadius: 32,
+                marginBottom: 20,
+              },
+              tabBarIconStyle: {},
+            }}
+          >
             <Tab.Screen
               name="Home"
               component={HomeScreen}
               options={{
-                tabBarIcon: ({ focused }) => {
+                tabBarIcon: ({ focused, color }) => {
                   return (
                     <MaterialCommunityIcons
                       name="movie-roll"
                       size={32}
-                      color={focused ? Colors.active : Colors.inactive}
+                      color={color}
                     />
                   );
                 },
@@ -44,12 +58,12 @@ const Router = () => {
               name="Favourite"
               component={FavouriteScreen}
               options={{
-                tabBarIcon: ({ focused }) => {
+                tabBarIcon: ({ focused, color }) => {
                   return (
                     <MaterialCommunityIcons
                       name="cards-heart"
                       size={32}
-                      color={focused ? Colors.active : Colors.inactive}
+                      color={color}
                     />
                   );
                 },
@@ -59,12 +73,12 @@ const Router = () => {
               name="Notifications"
               component={NotificationsScreen}
               options={{
-                tabBarIcon: ({ focused }) => {
+                tabBarIcon: ({ focused, color }) => {
                   return (
                     <MaterialCommunityIcons
                       name="bell"
                       size={32}
-                      color={focused ? Colors.active : Colors.inactive}
+                      color={color}
                     />
                   );
                 },
@@ -74,12 +88,12 @@ const Router = () => {
               name="Profile"
               component={ProfileScreen}
               options={{
-                tabBarIcon: ({ focused }) => {
+                tabBarIcon: ({ focused, color }) => {
                   return (
                     <MaterialCommunityIcons
                       name="account"
                       size={32}
-                      color={focused ? Colors.active : Colors.inactive}
+                      color={color}
                     />
                   );
                 },
@@ -102,9 +116,12 @@ const Router = () => {
 
 export default Router;
 
-const { container } = StyleSheet.create({
+const style = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: StatusBarHeight,
+  },
+  tab_navigator: {
+    // backgroundColor: "#e6e7e8",
   },
 });

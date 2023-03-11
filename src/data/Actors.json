@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "full_name": "Robert De Niro",
+    "img_uri": "https://m.media-amazon.com/images/M/MV5BMjAwNDU3MzcyOV5BMl5BanBnXkFtZTcwMjc0MTIxMw@@._V1_.jpg"
+  },
+  {
+    "id": 2,
+    "full_name": "Jack Nicholson",
+    "img_uri": "https://m.media-amazon.com/images/M/MV5BMTQ3OTY0ODk0M15BMl5BanBnXkFtZTYwNzE4Njc4._V1_.jpg"
+  },
+  {
+    "id": 3,
+    "full_name": "Marlon Brando",
+    "img_uri": "https://m.media-amazon.com/images/M/MV5BMTg3MDYyMDE5OF5BMl5BanBnXkFtZTcwNjgyNTEzNA@@._V1_.jpg"
+  },
+  {
+    "id": 4,
+    "full_name": "Leonardo DiCaprio",
+    "img_uri": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_.jpg"
+  },
+  {
+    "id": 5,
+    "full_name": "Keanu Reeves",
+    "img_uri": "https://m.media-amazon.com/images/M/MV5BNGJmMWEzOGQtMWZkNS00MGNiLTk5NGEtYzg1YzAyZTgzZTZmXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_.jpg"
+  }
+]
